@@ -15,8 +15,8 @@ These pages are built and styled using [EJS](https://ejs.co/)
 
 
 #### "/new"
-contains a form for users to create new messages. 
-new Messages are created using POST requests containing the data. 
+- contains a form for users to create new messages. 
+    - new Messages are created using POST requests containing the data. 
 
 ### db
-no actual database is used. It is a mock database built with a js file. 
+- no actual database is used. It is a mock database built with a js file. 
