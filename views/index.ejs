@@ -1,0 +1,16 @@
+
+<html>
+    <div class="body">
+
+        <h1><%= title %></h1>
+        <% messages.map((message)=> { %>
+            <li>
+                <div><%= message.text %></div>
+                <div><%= message.user %></div>
+                <div><%= message.added.toLocaleString() %></div>
+            </li>
+        <% }) %>
+        <button><a href="/new">Whats on your mind?</a></button>
+            
+    </div>
+</html>
