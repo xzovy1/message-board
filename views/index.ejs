@@ -1,8 +1,11 @@
 
 <html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+      </head>
     <div class="body">
-
         <h1><%= title %></h1>
+        <button><a href="/new">Whats on your mind?</a></button>
         <% messages.map((message)=> { %>
             <li>
                 <div><%= message.text %></div>
@@ -10,7 +13,6 @@
                 <div><%= message.added.toLocaleString() %></div>
             </li>
         <% }) %>
-        <button><a href="/new">Whats on your mind?</a></button>
             
     </div>
 </html>
