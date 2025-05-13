@@ -3,15 +3,19 @@ body{
     margin: 0 auto;
     width: 500px;
     color: rgb(51, 51, 51);
+    display: flex;
+}
+
+h1{
+    text-align: center;
 }
 
 .body{
-    margin: 75% auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    display: grid;
-    gap: 20px;
+    width: 100%;
 }
 
 a{
@@ -30,21 +34,22 @@ button{
 
 button:hover{
     background: rgb(151, 151, 255);
-    /* background-color: rgb(122, 122, 255); */
 }
 
 ul{
     list-style: none;
     padding-left: 0;
+    max-height: 245px;
+    
 }
 
 .message{
-    margin: 10% 0;
-    /* text-align: center; */
+    width: 100%;
+    margin: 10px 0 ;
     border: 1px solid grey;
     border-radius:  5px;
-    padding: 5px;
     transition: box-shadow 750ms;
+    word-wrap: break-word;
 }
 
 .message:hover{
@@ -52,7 +57,7 @@ ul{
 }
 
 .message * {
-    padding: 5px;
+    padding: 10px;
 }
 
 .message-text,
