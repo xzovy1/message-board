@@ -5,14 +5,16 @@
       </head>
     <div class="body">
         <h1><%= title %></h1>
-        <button><a href="/new">Whats on your mind?</a></button>
+        <a href="/new"><button>Whats on your mind?</button></a>
+        <ul>
         <% messages.map((message)=> { %>
-            <li>
-                <div><%= message.text %></div>
-                <div><%= message.user %></div>
-                <div><%= message.added.toLocaleString() %></div>
-            </li>
-        <% }) %>
+                <li class="message">
+                    <div class="message-user"><%= message.user %>:</div>
+                    <div class="message-text">"<%= message.text %>"</div>
+                    <div class="message-time"><%= message.added.toLocaleString() %></div>
+                </li>
+                <% }) %>
+            </ul>
             
     </div>
 </html>
