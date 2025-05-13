@@ -8,7 +8,8 @@ newMessageRouter.get('/', (req, res) => {
 
 newMessageRouter.post('/', (req, res) => {
     let {message, user} = req.body
-    messages.unshift({text: message, user: user, added: new Date()})
+    let ip = req.socket.remoteAddress;
+    messages.unshift({text: message, user: user, added: new Date(), ip: ip})
     res.redirect('/')
 })
 
