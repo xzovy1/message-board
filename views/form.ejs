@@ -6,10 +6,10 @@
         <h1>Share Your Thoughts</h1>
         <form method="post" action="/new" class="new-message-form">
             <label for="name">Name: </label>
-            <input type="text" id="name" name="user" />
+            <input type="text" id="name" name="user" minlength="2" required />
             
             <label for="message">Message: </label>
-            <textarea name="message" id="message" cols="30" rows="10" ></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" minlength="2" required></textarea>
             
             <button>Submit</button>
         </form>
