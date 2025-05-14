@@ -9,15 +9,37 @@
 
             <a href="/new"><button>Whats on your mind?</button></a>
             <ul>
-                <% messages.map((message)=> { %>
-                    <li class="message">
+                <% messages.map((message, index)=> { %>
+
+                    <li class="message" data-ip="<%= message.ip%>">
                         <div class="message-user"><%= message.user %>:</div>
                         <div class="message-text">"<%= message.text %>"</div>
                         <div class="message-time"><%= message.added.toLocaleString() %></div>
                     </li>
                     <% }) %>
+                <script>
+                    document.createElement('div')
+                    document.querySelectorAll('.message')
+                            .forEach(message => {
+                                let toggled = false;
+                                message.addEventListener('click', ()=>{
+                                    
+                                    if(toggled== false){
+                                        toggled = true;
+                                        let div = document.createElement('div');
+                                        div.setAttribute('id', 'info')
+                                        div.textContent = 'Sent from IP: ' + message.getAttribute('data-ip')
+                                        message.appendChild(div)
+                                    }else{
+                                        toggled = false;
+                                        let div = message.querySelector('#info')
+                                        message.removeChild(div)
+                                    }
+                                })
+                            })
+                </script>
                 </ul>
+
         </div>
-            
     </div>
 </html>
