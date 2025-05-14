@@ -18,5 +18,5 @@ app.use('/', indexRouter);
 app.use('/new', newMessageRouter);
 
 
-const PORT = 5173;
+const PORT = process.env.PORT || 5173;
 app.listen(PORT, ()=>{console.log(`running on http://localhost:${PORT}`)})
