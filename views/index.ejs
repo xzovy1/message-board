@@ -2,11 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
       </head>
+      <main id="canvas"></main> 
     <div class="body">
         <h1><%= title %></h1>
         <div class="content">
-
             <a href="/new"><button>Whats on your mind?</button></a>
             <ul>
                 <% messages.map((message, index)=> { %>
@@ -42,4 +43,5 @@
 
         </div>
     </div>
+    <script src="/sketch.js" defer></script>
 </html>

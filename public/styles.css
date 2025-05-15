@@ -1,6 +1,6 @@
-/* body{
-    animation: background-change 20s ease-in-out infinite alternate;
-} */
+body{
+    /* animation: background-change 20s ease-in-out infinite alternate; */
+}
 
 body{
     font-family: Helvetica, sans-serif;
@@ -8,10 +8,20 @@ body{
     width: 500px;
     color: rgb(51, 51, 51);
     display: flex;
+
+}
+h1, form{
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
 }
 
 h1{
     text-align: center;
+}
+.p5Canvas{
+    z-index: -1;
+    /* position: absolute; */
 }
 
 .body{
@@ -85,6 +95,10 @@ ul{
 
 .new-message-form * {
     margin: 5px;
+}
+
+.new-message-form button {
+    align-self:  center;
 }
 
 @keyframes background-change{

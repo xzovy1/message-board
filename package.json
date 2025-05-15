@@ -7,6 +7,10 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "p5.js",
+    "node"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xzovy1/message-board.git"
@@ -19,6 +23,7 @@
   "homepage": "https://github.com/xzovy1/message-board#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "p5": "^2.0.2"
   }
 }
