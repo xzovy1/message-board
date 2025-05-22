@@ -8,17 +8,17 @@ function setup(){
     drawingContext.shadowBlur = 2;
     drawingContext.shadowColor = 'grey'
     fill(random(0,255),random(0,255),random(0,255))
-    
-
 }
 
 function draw(){
+    if(mouseY > 1050){mouseY  }
+    if(mouseX > 1050){mouseX }
     ellipse(mouseY , mouseX , 30, 30);
     rect(mouseX , mouseY , 30, 30);
+    console.log(mouseX, mouseY)
 }
 
 function mouseClicked(){
-    // clear()
     stroke(random(0,255),random(0,255),random(0,255))
     fill(random(0,255),random(0,255),random(0,255))
 }
