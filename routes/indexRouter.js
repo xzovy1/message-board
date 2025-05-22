@@ -1,24 +1,8 @@
 const { Router } = require('express');
-
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date(),
-      ip: '127.0.0.1'
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date(),
-      ip: '127.0.0.1'
-    }
-  ];
+const indexController = require('../controllers/indexController')
 
 const indexRouter = Router();
-indexRouter.get('/', (req, res) => {
-    res.render('index', { title: 'Mini Message Board', messages: messages})
-})
 
+indexRouter.get('/', indexController.loadMessages)
 
-module.exports = {indexRouter, messages};
+module.exports = {indexRouter};

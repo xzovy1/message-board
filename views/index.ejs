@@ -10,6 +10,7 @@
         <div class="content">
             <a href="/new"><button>Whats on your mind?</button></a>
             <ul>
+                <% if (messages.length > 0) {%>
                 <% messages.map((message, index)=> { %>
 
                     <li class="message" data-ip="<%= message.ip%>">
@@ -39,6 +40,7 @@
                                 })
                             })
                 </script>
+                <% } %>
                 </ul>
 
         </div>

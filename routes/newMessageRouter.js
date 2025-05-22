@@ -1,17 +1,11 @@
 const { Router } = require('express');
 const {messages} = require('./indexRouter');
-
+const messageController = require('../controllers/newMessageController')
 
 const newMessageRouter = Router();
-newMessageRouter.get('/', (req, res) => {
-    res.render('form');
-})
 
-newMessageRouter.post('/', (req, res) => {
-    let {message, user} = req.body
-    let ip = req.socket.remoteAddress;
-    messages.unshift({text: message, user: user, added: new Date()})
-    res.redirect('/')
-})
+newMessageRouter.get('/', messageController.formGet)
+
+newMessageRouter.post('/', messageController.addMessagePost)
 
 module.exports = newMessageRouter;
