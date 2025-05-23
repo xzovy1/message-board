@@ -1,8 +1,9 @@
-//.schema -> id, message, user, date_time
+//.schema -> id, message, submitted_by, date_time
 const pool = require('./pool');
 
 async function getAllMessages(){
     const { rows } = await pool.query("SELECT * FROM messages");
+    console.log({rows})
     return rows;
 }
 

@@ -18,7 +18,7 @@ function draw(){
         ellipse(mouseY , mouseX , 30, 30);
         rect(mouseX , mouseY , 30, 30);
     }
-    console.log(mouseX, mouseY)
+    // console.log(mouseX, mouseY)
 }
 
 function mouseClicked(){

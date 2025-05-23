@@ -14,9 +14,15 @@
                 <% messages.map((message, index)=> { %>
 
                     <li class="message" data-ip="<%= message.ip%>">
-                        <div class="message-user"><%= message.user %>:</div>
-                        <div class="message-text">"<%= message.text %>"</div>
-                        <div class="message-time"><%= message.added.toLocaleString() %></div>
+                        <div class="message-user" date-time="<%= message.date_time.toLocaleString() %>">
+                            <%= message.submitted_by %>:
+                        </div>
+                        <div>
+                            "<%= message.message %>"
+                        </div>
+                        <div class="date-time" style="display:none">
+                            Submitted on: <%= message.date_time.toLocaleString() %>
+                        </div>
                     </li>
                     <% }) %>
                 <script>
@@ -24,18 +30,15 @@
                     document.querySelectorAll('.message')
                             .forEach(message => {
                                 let toggled = false;
-                                message.addEventListener('click', ()=>{
+                                message.addEventListener('click', (e)=>{
                                     
-                                    if(toggled== false){
+                                    console.log(message)
+                                    if(toggled == false){
                                         toggled = true;
-                                        let div = document.createElement('div');
-                                        div.setAttribute('id', 'info')
-                                        div.textContent = 'Sent on: ' + message.getAttribute('data-ip')
-                                        message.appendChild(div)
+                                        message.querySelector('.date-time').style = 'display: inline;'
                                     }else{
                                         toggled = false;
-                                        let div = message.querySelector('#info')
-                                        message.removeChild(div)
+                                        message.querySelector('.date-time').style = 'display: none;'
                                     }
                                 })
                             })
