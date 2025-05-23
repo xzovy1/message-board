@@ -10,6 +10,7 @@
         <div class="content">
             <a href="/new"><button>Whats on your mind?</button></a>
             <ul>
+                <% if (messages.length > 0) {%>
                 <% messages.map((message, index)=> { %>
 
                     <li class="message" data-ip="<%= message.ip%>">
@@ -29,7 +30,7 @@
                                         toggled = true;
                                         let div = document.createElement('div');
                                         div.setAttribute('id', 'info')
-                                        div.textContent = 'Sent from IP: ' + message.getAttribute('data-ip')
+                                        div.textContent = 'Sent on: ' + message.getAttribute('data-ip')
                                         message.appendChild(div)
                                     }else{
                                         toggled = false;
@@ -39,6 +40,7 @@
                                 })
                             })
                 </script>
+                <% } %>
                 </ul>
 
         </div>

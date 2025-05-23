@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/xzovy1/message-board#readme",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "p5": "^2.0.2"
+    "p5": "^2.0.2",
+    "pg": "^8.16.0"
   }
 }
