@@ -64,6 +64,5 @@ function mouseClicked(){
 
 
 function doubleClicked(){
-    clear();
-    r = 5;
+    noLoop();
 }
