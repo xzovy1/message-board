@@ -6,8 +6,10 @@ exports.formGet = (req, res) => {
 
 exports.addMessagePost = async(req, res) => {
     let {message, user} = req.body;
-    let ip = req.ip
-    let messages = await db.getAllMessages();
+    const now = new Date();
+    const data = {message: message, user: user, date_time: now};
+    await db.addMessage(data)
+    
     // let ip = req.socket.remoteAddress;
     // messages.unshift({text: message, user: user, added: new Date()})
     res.redirect('/')

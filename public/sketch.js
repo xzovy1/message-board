@@ -22,7 +22,6 @@ function setup(){
 }
 
 function draw(){
-    
     ellipse(x, y, r , r);
     x= x + xspeed * noise(random(1,4));
     y= y + yspeed * noise(2);
@@ -46,7 +45,6 @@ function draw(){
         xspeed = -3;
         yspeed = -2;
     }
-    console.log(y)
 }
 
 function randomize(){
@@ -60,6 +58,7 @@ function mouseClicked(){
     y=mouseY;
     yspeed = 3;
     xspeed =2;
+    r = 2;
 
 }
 
